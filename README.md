@@ -1,16 +1,39 @@
+// SPDX-License-identifier: MIT
+program solidity ^0.8.20;
+import "@Openzeppelin/contracts-upgradeable/token/ERC1155/ERC1155/Upgredeable.sol";
+import "@Openzeppelin/contracts-upgradeable/access/Ownable/Upgredeable.sol";
+import "@Openzeppelin/contracts-upgradeable/access/Ownable/Upgredeable.sol";
+import "@Openzeppelin/contracts-upgradeable/proxy/utils /initializable.sol";
 
-metadata.json
-contracts/MyToken.sol
-@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol
-@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol
-@openzeppelin/contracts-upgradeable/token/ERC1155/ERC1155Upgradeable.sol
-@openzeppelin/contracts/interfaces/draft-IERC6093.sol
-@openzeppelin/contracts/utils/Arrays.sol
-@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol
-@openzeppelin/contracts/utils/introspection/IERC165.sol
-@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol
-@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol
-@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol
-@openzeppelin/contracts/token/ERC1155/IERC1155.sol
-@openzeppelin/contracts/utils/math/Math.sol
-@openzeppelin/contracts/utils/StorageSlot.sol
+ Contract MyToken is initializable, OwnableUpgredeable {
+     /// Costom: oz- upgrades-unsafe-allown constructor
+     Constructor() { infinite gas 2283600 gas
+    _disablintializers() 
+   }
+
+  function initialize (address initialOwner) public initializer { infinite gas
+    _ERC1155-int("")
+    _Ownablei-init(initialOwner);
+
+   }
+
+
+  function setURI( string memory newuri) public onlyOwner
+    _setURI(newuri);
+   }
+
+  function mint (infinite gas
+       address account,
+       unit256 id,
+       unit256 amount,
+       bytes memory data
+   ) public onlyOwner {...
+   }
+
+   function mintbatch( infinite gas
+       address to,
+       unit256[] memory ids,
+       unit256[] memory amounts,
+       bytes memory data 
+    ) public onlyOwner {
+      _mintbatch (to, ids,amounts, data);
