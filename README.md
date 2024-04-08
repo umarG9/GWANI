@@ -1,39 +1,41 @@
-// SPDX-License-identifier: MIT
-program solidity ^0.8.20;
-import "@Openzeppelin/contracts-upgradeable/token/ERC1155/ERC1155/Upgredeable.sol";
-import "@Openzeppelin/contracts-upgradeable/access/Ownable/Upgredeable.sol";
-import "@Openzeppelin/contracts-upgradeable/access/Ownable/Upgredeable.sol";
-import "@Openzeppelin/contracts-upgradeable/proxy/utils /initializable.sol";
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+import "@openzeppelin/contracts-upgradeable/token/ERC1155/ERC1155Upgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
- Contract MyToken is initializable, OwnableUpgredeable {
-     /// Costom: oz- upgrades-unsafe-allown constructor
-     Constructor() { infinite gas 2283600 gas
-    _disablintializers() 
-   }
+contract MyToken is Initializable, ERC1155Upgradeable, OwnableUpgradeable {
+        /// @custom:oz-upgrades-unsafe-allow constructor
+        constructor() {
+                _disableInitializers();
+        }
 
-  function initialize (address initialOwner) public initializer { infinite gas
-    _ERC1155-int("")
-    _Ownablei-init(initialOwner);
+        function initialize(address initialOwner) public initializer {
+                __ERC1155_init("");
+                __Ownable_init(initialOwner);
+        }
 
-   }
+        function setURI(string memory newuri) public onlyOwner {
+                _setURI(newuri);
 
+        }
 
-  function setURI( string memory newuri) public onlyOwner
-    _setURI(newuri);
-   }
+        function mint(
+                address account,
+                uint256 id,
+                uint256 amount,
+                bytes memory data
+        ) public onlyOwner {
+                _mint(account, id, amount, data);
+        }
 
-  function mint (infinite gas
-       address account,
-       unit256 id,
-       unit256 amount,
-       bytes memory data
-   ) public onlyOwner {...
-   }
-
-   function mintbatch( infinite gas
-       address to,
-       unit256[] memory ids,
-       unit256[] memory amounts,
-       bytes memory data 
-    ) public onlyOwner {
-      _mintbatch (to, ids,amounts, data);
+        function mintBatch(
+                address to,
+                uint256[] memory ids,
+                uint256[] memory amounts,
+                bytes memory data
+        ) public onlyOwner {
+         _mintBatch(to, ids, amounts, data);
+        }
+}
