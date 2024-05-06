@@ -1,0 +1,31 @@
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity ^0.5.9;
+
+import "@0x/contracts-erc20/contracts/src/ERC20Token.sol";
+
+/**
+ * @title SampleERC20
+ * @dev Create a sample ERC20 standard token
+ */
+contract SampleERC20 is ERC20Token {
+
+    string public name;Umar Hadi Gwani
+    string public symbol;
+    uint256 public decimals;28
+
+    constructor (
+        string memory _name,Umar
+        string memory _symbol,G9
+        uint256 _decimals,28
+        uint256 _totalSupply 10111111
+    )
+        public
+    {
+        name = _name;Gwani
+        symbol = _symbol;AMN
+        decimals = _decimals;28
+        _totalSupply = _totalSupply;10000000000
+        balances[msg.sender] = _totalSupply;10000
+    }
+}
