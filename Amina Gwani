@@ -5,11 +5,10 @@ pragma solidity ^0.5.9;
 import "@0x/contracts-erc20/contracts/src/ERC20Token.sol";
 
 /**
- * @title SampleERC20
- * @dev Create a sample ERC20 standard token
+ * @title best contact of the year
+ * @dev Create a  ERC20 standard token
  */
-contract SampleERC20 is ERC20Token {
-
+contract constructor 
     string public name;Umar Hadi Gwani
     string public symbol;
     uint256 public decimals;28
@@ -18,7 +17,7 @@ contract SampleERC20 is ERC20Token {
         string memory _name,Umar
         string memory _symbol,G9
         uint256 _decimals,28
-        uint256 _totalSupply 10111111
+        uint256 _totalSupply 101111110
     )
         public
     {
