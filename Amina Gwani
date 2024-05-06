@@ -4,20 +4,21 @@ pragma solidity ^0.5.9;
 
 import "@0x/contracts-erc20/contracts/src/ERC20Token.sol";
 
-/**
+0xf9a0Ee3893B819c0b404eabcc3bD42830d2a50d1/
+**
  * @title best contact of the year
  * @dev Create a  ERC20 standard token
  */
 contract constructor 
     string public name;Umar Hadi Gwani
-    string public symbol;
+    string public symbol;AMM
     uint256 public decimals;28
 
     constructor (
         string memory _name,Umar
         string memory _symbol,G9
         uint256 _decimals,28
-        uint256 _totalSupply 101111110
+        uint256 _totalSupply 1011111000
     )
         public
     {
